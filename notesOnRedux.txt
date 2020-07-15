@@ -1,0 +1,44 @@
+Redux
+
+What does it solve?
+
+Single state? No Props Drilling.
+
+Components managing their own state? 
+ * Fixes props drilling
+ * Would require hoisting, but hard to know the state of the Component
+
+ Global State Management?
+* All componnets have access to state. 
+* No props drilling
+* No issue with sharing state
+* However, there are no rules for accessing the state.
+* Unrestricted global state is undesirable.
+
+The Redux store
+Redux uses a store which is a single JSON object.
+
+How does Redux control the global state?
+
+            { Redux Store }
+Redux Actions           Reducers
+
+Redux Actions
+
+{ type, payload }
+
+USER_DATA_LOADED
+ITEM_ADDED_TO_CART
+
+Expliciltly define the redux Actions instead of leaving it to chance
+
+Reducers
+Reducers are what should happen to the redux store (central state), when a given action occurs.
+
+How Does Redux Work?
+
+Components can only interact with the state by triggering Redux actions.
+
+Unidrectional Data Flow
+
+UI triggers action > State is updated > Components See updated state
